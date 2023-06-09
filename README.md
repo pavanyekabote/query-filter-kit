@@ -110,7 +110,7 @@ Contributions are welcome! Please open an issue or pull request on GitHub.
 
 ### License
 
-query-filter-kit is licensed under the ISC License.
+query-filter-kit is licensed under the MIT License.
 
 ---
 
