@@ -1,0 +1,37 @@
+{
+  "name": "query-filter-kit",
+  "version": "1.0.0",
+  "description": "A javascript library, helps in building and parsing huge list of query filters, which are usually found in ecommerce websites",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "tsc": "tsc",
+    "prepublishOnly": "npm run tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/pavanyekabote/query-filter-kit.git"
+  },
+  "keywords": [
+    "query",
+    "filter",
+    "builder",
+    "parser",
+    "ecommerce",
+    "search"
+  ],
+  "author": "Pavan Kumar Yekabote",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavanyekabote/query-filter-kit/issues"
+  },
+  "homepage": "https://github.com/pavanyekabote/query-filter-kit#readme",
+  "dependencies": {
+    "typescript": "^5.1.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}
