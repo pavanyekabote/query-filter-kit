@@ -55,8 +55,10 @@ console.log(encodedQuery);
 
 ```javascript
 const querykit = require('query-filter-kit');
+
 const queryString = 'discount:gt:20&colors:in:red,blue,green&gender:eq:men&price:btw:500,1000';
 const parser = new querykit.QueryFilterParser(queryString);
+
 // Print by stringifying the parsed json object
 console.log(JSON.stringify(parser.parse(), null, 4));
 /*
