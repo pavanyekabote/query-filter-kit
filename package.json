@@ -1,6 +1,6 @@
 {
   "name": "query-filter-kit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A javascript library, helps in building and parsing huge list of query filters, which are usually found in ecommerce websites",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
