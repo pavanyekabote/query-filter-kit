@@ -113,5 +113,7 @@ Contributions are welcome! Please open an issue or pull request on GitHub.
 query-filter-kit is licensed under the MIT License.
 
 ---
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://bmc.link/yekabotepavan)
+
 
 Developed with ❤️ by Pavan Kumar Yekabote.
