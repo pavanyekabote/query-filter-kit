@@ -1,14 +1,16 @@
 import { Operators } from '../constants';
+import { QueryStringEscaper } from '../string-escaper';
 
 class ArrayConverter {
-  convert(value: string, delimiter = ',') {
-    return value.split(delimiter);
+  private readonly COMMA_CHAR_SPLITTER = /(?<!\\),/gis;
+  convert(value: string, delimiter = this.COMMA_CHAR_SPLITTER) {
+    return value.split(delimiter).map(QueryStringEscaper.unescapeListChars);
   }
 }
 
 class NullConverter {
   convert(value: string) {
-    return value;
+    return QueryStringEscaper.unescapeListChars(value);
   }
 }
 
