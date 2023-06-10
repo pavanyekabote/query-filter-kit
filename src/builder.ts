@@ -10,28 +10,44 @@ export class QueryFilterBuilder {
 
   withGreaterThanEquals(key: string, value: number | Date) {
     const k = QueryStringEscaper.escapeSpecialChars(key);
-    const q = `${k}:${Operators.GTE}:${value}`;
+    let v =
+      typeof value == 'string'
+        ? QueryStringEscaper.escapeSpecialChars(value)
+        : value;
+    const q = `${k}:${Operators.GTE}:${v}`;
     this.filters.push(q);
     return this;
   }
 
   withGreaterThan(key: string, value: number | Date) {
     const k = QueryStringEscaper.escapeSpecialChars(key);
-    const q = `${k}:${Operators.GT}:${value}`;
+    let v =
+      typeof value == 'string'
+        ? QueryStringEscaper.escapeSpecialChars(value)
+        : value;
+    const q = `${k}:${Operators.GT}:${v}`;
     this.filters.push(q);
     return this;
   }
 
   withLessThanEquals(key: string, value: number | Date) {
     const k = QueryStringEscaper.escapeSpecialChars(key);
-    const q = `${k}:${Operators.LTE}:${value}`;
+    let v =
+      typeof value == 'string'
+        ? QueryStringEscaper.escapeSpecialChars(value)
+        : value;
+    const q = `${k}:${Operators.LTE}:${v}`;
     this.filters.push(q);
     return this;
   }
 
   withLessThan(key: string, value: number | Date) {
     const k = QueryStringEscaper.escapeSpecialChars(key);
-    const q = `${k}:${Operators.LT}:${value}`;
+    let v =
+      typeof value == 'string'
+        ? QueryStringEscaper.escapeSpecialChars(value)
+        : value;
+    const q = `${k}:${Operators.LT}:${v}`;
     this.filters.push(q);
     return this;
   }
@@ -83,7 +99,24 @@ export class QueryFilterBuilder {
 
   withContains(key: string, value: string) {
     const k = QueryStringEscaper.escapeSpecialChars(key);
-    const q = `${k}:${Operators.CONTAINS}:${value}`;
+    const v = QueryStringEscaper.escapeSpecialChars(value);
+    const q = `${k}:${Operators.CONTAINS}:${v}`;
+    this.filters.push(q);
+    return this;
+  }
+
+  withStartsWith(key: string, value: string) {
+    const k = QueryStringEscaper.escapeSpecialChars(key);
+    const v = QueryStringEscaper.escapeSpecialChars(value);
+    const q = `${k}:${Operators.STARTS_WITH}:${v}`;
+    this.filters.push(q);
+    return this;
+  }
+
+  withEndsWith(key: string, value: string) {
+    const k = QueryStringEscaper.escapeSpecialChars(key);
+    const v = QueryStringEscaper.escapeSpecialChars(value);
+    const q = `${k}:${Operators.ENDS_WITH}:${v}`;
     this.filters.push(q);
     return this;
   }
