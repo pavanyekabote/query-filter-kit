@@ -12,7 +12,7 @@ export class QueryStringEscaper {
     if (typeof str !== 'string') return str;
     return str
       .replace(/\\:/gis, ':')
-      .replace(/\"/gis, '"')
+      .replace(/\\"/gis, '"')
       .replace(/\\&/gis, '&');
   }
 
