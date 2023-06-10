@@ -4,7 +4,8 @@ export class QueryStringEscaper {
     return str
       .replace(/\:/gis, '\\:')
       .replace(/\"/gis, '\\"')
-      .replace(/\&/gis, '\\&');
+      .replace(/\&/gis, '\\&')
+      .replace(/,/gis, '\\,');
   }
 
   static unescapeSpecialChars(str: string) {
@@ -13,5 +14,10 @@ export class QueryStringEscaper {
       .replace(/\\:/gis, ':')
       .replace(/\"/gis, '"')
       .replace(/\\&/gis, '&');
+  }
+
+  static unescapeListChars(str: string) {
+    if (typeof str != 'string') return str;
+    return str.replace(/\\,/gis, ',');
   }
 }
