@@ -1,11 +1,11 @@
 {
   "name": "query-filter-kit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A javascript library, helps in building and parsing huge list of query filters, which are usually found in ecommerce websites",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha -r ts-node/register tests/**/*.spec.ts",
     "format": "prettier --write \"src/**/*.ts\"",
     "tsc": "tsc",
     "prepublishOnly": "npm run tsc"
@@ -32,6 +32,11 @@
     "typescript": "^5.1.3"
   },
   "devDependencies": {
-    "prettier": "^2.8.8"
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1"
   }
 }
