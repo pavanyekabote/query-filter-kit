@@ -9,4 +9,6 @@ export enum Operators {
   LTE = 'lte',
   LT = 'lt',
   GT = 'gt',
+  STARTS_WITH = 'sw',
+  ENDS_WITH = 'ew',
 }
