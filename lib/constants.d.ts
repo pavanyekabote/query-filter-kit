@@ -8,5 +8,7 @@ export declare enum Operators {
     GTE = "gte",
     LTE = "lte",
     LT = "lt",
-    GT = "gt"
+    GT = "gt",
+    STARTS_WITH = "sw",
+    ENDS_WITH = "ew"
 }

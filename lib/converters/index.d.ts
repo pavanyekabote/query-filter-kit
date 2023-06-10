@@ -1,5 +1,6 @@
 declare class ArrayConverter {
-    convert(value: string, delimiter?: string): string[];
+    private readonly COMMA_CHAR_SPLITTER;
+    convert(value: string, delimiter?: RegExp): string[];
 }
 declare class NullConverter {
     convert(value: string): string;
