@@ -1,5 +1,8 @@
 query-filter-kit
 --
+[![npm version](https://badge.fury.io/js/query-filter-kit.svg)](https://badge.fury.io/js/query-filter-kit)
+[![Npm package total downloads](https://badgen.net/npm/dt/query-filter-kit)](https://npmjs.com/package/query-filter-kit)
+
 A javascript library, helps in building and parsing huge list of query filters. 
 
 ### Introduction
